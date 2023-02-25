@@ -4,7 +4,6 @@ import "./CSS/App.css";
 function App(){
   return(
     <div className="App">
-      <p>task manager</p>
     </div>
   )
 }
