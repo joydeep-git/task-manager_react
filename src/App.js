@@ -1,9 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import "./CSS/App.css";
+import TaskManager from "./Components/TaskManager";
 function App(){
   return(
-    <div className="App">
+    <div className="app">
+      <TaskManager />
     </div>
   )
 }
