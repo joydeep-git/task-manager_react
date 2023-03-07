@@ -15,9 +15,8 @@ function TaskManager() {
       collection(db, "tasks"),
       orderBy("created", "desc")
     );
-    console.log(taskColRef);
+
     onSnapshot(taskColRef, (snapshot) => {
-      console.log(snapshot.docs);
       setTasks(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -26,13 +25,16 @@ function TaskManager() {
       );
     });
   }, []);
-  console.log(tasks);
   return (
     <div className="taskManager">
+
       <header>Task Manager</header>
-      <div className="taskManager__container">
-        <button onClick={() => setOpenAddModel(true)}>Add task +</button>
-        <div className="taskManager__tasks">
+
+      <div className="taskManager_container">
+
+        <button onClick={() => setOpenAddModel(true)} className="addTaskBtn"><b>Add task +</b></button>
+
+        <div className="taskManager_tasks">
           {tasks.map((task) => (
             <Task
               key={task.id}
@@ -44,11 +46,12 @@ function TaskManager() {
           ))}
         </div>
       </div>
+
       {openAddModel && (
         <AddTask onClose={() => setOpenAddModel(false)} open={openAddModel} />
       )}
+
     </div>
   );
 }
-
 export default TaskManager;
