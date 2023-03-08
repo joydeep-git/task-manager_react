@@ -25,15 +25,15 @@ function Task({ id, title, description, completed }) {
     }
   };
 
-  const handleChange = async () => {
-    const taskDocRef = doc(db, "tasks", id);
+  // const handleChange = async () => {
 
-    try {
-      await updateDoc(taskDocRef, { completed: checked });
-    } catch (error) {
-      alert(error);
-    }
-  };
+  //   const taskDocRef = doc(db, "tasks", id);
+  //   try {
+  //     await updateDoc(taskDocRef, { completed: checked });
+  //   } catch (error) {
+  //     alert(error);
+  //   }
+  // };
 
   const handleClose = () => {
     setOpen({ edit: false, view: false });
