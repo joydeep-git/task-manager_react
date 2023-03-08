@@ -1,17 +1,54 @@
-.taskItem {
-  margin-top: 20px;
+.taskItem{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.taskItem h2 {
-  font-weight: 400;
-  text-transform: uppercase;
+.taskItem h2{
+  align-self: flex-start;
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
-.taskItem p {
-  margin-top: 10px;
-  font-size: 18px;
-  max-height: 300px;
-  line-height: 25px;
-  overflow-y: auto;
-  color: hsl(210, 20%, 25%);
+.taskItem .description_display{
+  display: flex;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 0px;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  width: 100%;
+  max-width: 100%;
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.taskItem button{
+  display: flex;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 0;
+  align-self: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.taskItem button:hover{
+  background-color: rgb(29, 107, 202);
+  color: rgb(255, 255, 255);
+}
+
+.taskItem button:focus{
+  border: 2px solid rgb(226, 94, 24);
 }

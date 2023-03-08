@@ -1,5 +1,4 @@
 import Modal from "./Modal";
-import "../CSS/editTask.css";
 import { useState } from "react";
 import { db } from "../firebase/firebase";
 import { doc, updateDoc } from "firebase/firestore";

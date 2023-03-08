@@ -9,14 +9,19 @@ function Modal({ modalLable, onClose, open, children, custom_modal }) {
   if (open) {
     return (
       <div className="modalContainer" onClick={handleClose}>
+
         <div className={`modal ${custom_modal}`}>
-          <div className="modal__head">
+
+          <div className="modal_top">
             <h2>{modalLable}</h2>
-            <span className="modal__close" onClick={onClose}>
+            <span onClick={onClose}>
               x
             </span>
           </div>
-          {children}
+
+          <div className="modal_children">
+            {children}
+          </div>
         </div>
       </div>
     );
