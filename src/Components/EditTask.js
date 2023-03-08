@@ -8,7 +8,6 @@ function EditTask({ open, onClose, toEditTitle, toEditDescription, id }) {
   const handleUpdate = async (e) => {
     e.preventDefault();
     const taskDocRef = doc(db, "tasks", id);
-    console.log(taskDocRef);
     try {
       await updateDoc(taskDocRef, { title, description });
     } catch (error) {

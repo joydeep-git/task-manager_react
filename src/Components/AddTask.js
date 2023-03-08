@@ -6,8 +6,6 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 function AddTask({ onClose, open }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  console.log(title);
-  console.log(description);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
