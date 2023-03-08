@@ -18,7 +18,7 @@
 }
 
 .taskItem .description_display{
-  display: flex;
+  display: inline-block;
   border-radius: 10px;
   font-size: 1rem;
   margin: 0px;
@@ -29,6 +29,7 @@
   max-width: 100%;
   align-self: flex-start;
   justify-content: center;
+  overflow: auto;
 }
 
 .taskItem button{

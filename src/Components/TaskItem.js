@@ -7,7 +7,7 @@ function TaskItem({ onClose, open, title, description }) {
       <div className="taskItem">
 
         <h2>{title}</h2>
-        <textarea className="description_display" disabled>{description}</textarea>
+        <span className="description_display">{description}</span>
         <button onClick={onClose}>Close</button>
 
       </div>

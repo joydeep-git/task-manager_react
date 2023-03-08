@@ -6,7 +6,7 @@ import EditTask from "./EditTask";
 
 import { useState } from "react";
 import { db } from "../firebase/firebase";
-import { doc, updateDoc, deleteDoc } from "firebase/firestore";
+import { doc, deleteDoc } from "firebase/firestore";
 
 function Task({ id, title, description, completed }) {
 
