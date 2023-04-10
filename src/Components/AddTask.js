@@ -6,8 +6,13 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 function AddTask({ onClose, open }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (title.trim() === "" || description.trim() === "") {
+      alert("Please enter a title and description for the task.");
+      return;
+    }
     try {
       await addDoc(collection(db, "tasks"), {
         title: title,
@@ -20,6 +25,7 @@ function AddTask({ onClose, open }) {
     }
     onClose();
   };
+
   return (
     <Modal modalLable="Add Task" onClose={onClose} open={open}>
       <form className="addTask" name="addTask" onSubmit={handleSubmit}>

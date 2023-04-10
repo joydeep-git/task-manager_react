@@ -5,9 +5,14 @@ import { doc, updateDoc } from "firebase/firestore";
 function EditTask({ open, onClose, toEditTitle, toEditDescription, id }) {
   const [title, setTitle] = useState(toEditTitle);
   const [description, setDescription] = useState(toEditDescription);
+
   const handleUpdate = async (e) => {
     e.preventDefault();
     const taskDocRef = doc(db, "tasks", id);
+    if (title.trim() === "" || description.trim() === "") {
+      alert("Please enter a title and description for the task.");
+      return;
+    }
     try {
       await updateDoc(taskDocRef, { title, description });
     } catch (error) {
@@ -15,6 +20,7 @@ function EditTask({ open, onClose, toEditTitle, toEditDescription, id }) {
     }
     onClose();
   };
+
   return (
     <Modal modalLable="Edit Task" onClose={onClose} open={open}>
       <form className="addTask" name="addTask" onSubmit={handleUpdate}>
