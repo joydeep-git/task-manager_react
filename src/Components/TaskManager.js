@@ -4,6 +4,7 @@ import Task from "./Task";
 import AddTask from "./AddTask";
 import { db } from "../firebase/firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
+
 function TaskManager() {
 
   const [openAddModel, setOpenAddModel] = useState(false);
