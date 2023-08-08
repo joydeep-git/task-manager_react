@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB4_GVhBtorOy_DxITVEHsvThF41RtdbFY",
-  authDomain: "task-manager-react-3960b.firebaseapp.com",
-  projectId: "task-manager-react-3960b",
-  storageBucket: "task-manager-react-3960b.appspot.com",
-  messagingSenderId: "225499404225",
-  appId: "1:225499404225:web:1982a35cb58a60b12a0140",
-  measurementId: "G-0YVDMPZS2B"
+  apiKey: "AIzaSyBqjbAwURDXMOQ7Jlev-Aa-nRrlSEenczY",
+  authDomain: "task-manager-dc2b1.firebaseapp.com",
+  projectId: "task-manager-dc2b1",
+  storageBucket: "task-manager-dc2b1.appspot.com",
+  messagingSenderId: "120620046354",
+  appId: "1:120620046354:web:fdb136ed11b732b576e0cb",
+  measurementId: "G-8GE3X9REQC"
 };
 
 const app = initializeApp(firebaseConfig);
